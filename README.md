@@ -30,4 +30,8 @@ watch, execute a program periodically.
 You can connect from any application which is independent with programming language. 
 Currently [this](http://redis.io/topics/cluster-tutorial#playing-with-the-cluster) link explains which clients exist.
 
+# Screenshot
+
+![ScreenShot](https://raw.github.com/baranbartu/redis-cluster-scripts/master/screenshot.png)
+
 
