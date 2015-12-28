@@ -18,6 +18,13 @@ ruskit is redis-cluster administration toolkit which was developed with Python.
 
 watch, execute a program periodically.
 
+**Execute scripts in order**
+
+    chmod +x setup-redis-cluster
+    chmod +x watch-redis-cluster
+    ./setup-redis-cluster
+    watch -d -n 1 "ruskit info localhost:6376;./watch-redis-cluster.sh"
+
 # Connection
 
 You can connect from any application which is independent with programming language. 
