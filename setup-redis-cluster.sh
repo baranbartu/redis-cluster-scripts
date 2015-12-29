@@ -17,8 +17,9 @@ echo "======================================================================="
 
 sleep 1
 
-pkill -f redis-server &
-redis-server ${DEFAULT_REDIS_CONFIG}
+pkill -f redis-server
+sleep 1
+redis-server ${DEFAULT_REDIS_CONFIG} &
 redis-cli flushall
 
 sleep 1
