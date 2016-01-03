@@ -1,7 +1,7 @@
 #!/bin/sh
 DEFAULT_REDIS_CONFIG='/usr/local/etc/redis.conf'
 CLUSTER_CONFIG_PATH='/usr/local/etc/redis-cluster/'
-PORTS=('6376' '6377' '6378')
+PORTS=('6376' '6377' '6378' '6380')
 
 echo "################################################"
 echo "########### Redis CLuster Setup  ###############"
@@ -20,6 +20,7 @@ sleep 1
 pkill -f redis-server
 sleep 1
 redis-server ${DEFAULT_REDIS_CONFIG} &
+sleep 1
 redis-cli flushall
 
 sleep 1
@@ -77,7 +78,11 @@ for port in "${PORTS[@]}"
 
             redis-cli -p ${port} flushall
 
+            sleep 1
+
             ruskit destroy localhost:${port}
+
+            sleep 1
 
             CLUSTER_INSTANCES+=" 127.0.0.1:$port"
 
@@ -95,4 +100,4 @@ sleep 1
 
 echo
 
-ruskit create -m 3 ${CLUSTER_INSTANCES}
+ruskit create -m ${#PORTS[@]} ${CLUSTER_INSTANCES}
