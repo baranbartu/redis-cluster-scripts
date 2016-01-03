@@ -11,13 +11,13 @@ in your local development environment
 
     pip install ruskit
 
-ruskit is redis-cluster administration toolkit which was developed with Python. We' ll be setuping redis-cluster using ruskit. It supports adding/deleting new node to cluster, and also supports resharding.
+Ruskit is redis-cluster administration toolkit which was developed with Python. We' ll be setuping redis-cluster using ruskit. It supports adding/deleting new node to cluster, and also supports resharding.
 
 **watch**
 
     brew install watch
 
-execute a program periodically with 'watch'. We' ll be observing our cluster with watch. Watch script has all nodes with key/slot distribution, keyspace info of each node and master/slave relationships on the cluster.
+Execute a program periodically with 'watch'. We' ll be observing our cluster with watch. Watch script has all nodes with key/slot distribution, keyspace info of each node and master/slave relationships on the cluster.
 
 # Execute scripts in order
 
