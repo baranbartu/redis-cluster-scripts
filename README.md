@@ -11,7 +11,7 @@ in your local development environment
 
     pip install ruskit
 
-ruskit is redis-cluster administration toolkit which was developed with Python. We' ll be setuping redis-cluster using ruskit. It supports adding/deleting new nodeto cluster, and also supports resharding.
+ruskit is redis-cluster administration toolkit which was developed with Python. We' ll be setuping redis-cluster using ruskit. It supports adding/deleting new node to cluster, and also supports resharding.
 
 **watch**
 
