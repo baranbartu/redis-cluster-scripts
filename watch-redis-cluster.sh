@@ -11,3 +11,11 @@ for port in "${PORTS[@]}"
         redis-cli -p ${port} info keyspace
         echo
     done
+
+echo 
+echo ========== Non Clustered Redis Instance ==========
+echo 
+echo 6379
+echo =============================
+redis-cli -p 6379 info keyspace
+echo
