@@ -76,6 +76,8 @@ for port in "${PORTS[@]}"
 
             redis-server ${CONF} --port ${port} &
 
+	    sleep 1
+
             redis-cli -p ${port} flushall
 
             sleep 1
