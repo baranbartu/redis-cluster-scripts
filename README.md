@@ -9,7 +9,7 @@ in your local development environment
 
 **ruskit**
 
-    pip install ruskit
+    pip install git+ssh://git@github.com/baranbartu/ruskit.git
 
 Ruskit is redis-cluster administration toolkit which was developed with Python. We' ll be setuping redis-cluster using ruskit. It supports adding/deleting new node to cluster, and also supports resharding.
 
