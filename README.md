@@ -7,11 +7,11 @@ in your local development environment
 
 # Pre-Requirements
 
-**ruskit**
+**redis-clu**
 
-    pip install git+ssh://git@github.com/baranbartu/ruskit.git
+    pip install redis-clu
 
-Ruskit is redis-cluster administration toolkit which was developed with Python. We' ll be setuping redis-cluster using ruskit. It supports adding/deleting new node to cluster, and also supports resharding.
+redis-clu is redis-cluster management toolkit which was developed with Python. We' ll be setuping redis-cluster using redis-clu. It supports adding/deleting new node to cluster, and also supports resharding.
 
 **watch**
 
@@ -24,7 +24,7 @@ Execute a program periodically with 'watch'. We' ll be observing our cluster wit
     chmod +x setup-redis-cluster
     chmod +x watch-redis-cluster
     ./setup-redis-cluster
-    watch -d -n 1 "ruskit info localhost:6376;./watch-redis-cluster.sh"
+    watch -d -n 1 "redis-clu status localhost:6376"
 
 # Connection
 
