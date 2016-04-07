@@ -42,7 +42,7 @@ echo "redis-cluster config path will be created with related config files."
 echo "======================================================================="
 
 if [ ! -d ${CLUSTER_CONFIG_PATH} ]; then
-    mkdir ${CLUSTER_CONFIG_PATH}
+    mkdir -p ${CLUSTER_CONFIG_PATH}
 fi
 
 sleep 1
@@ -82,7 +82,7 @@ for port in "${PORTS[@]}"
 
             sleep 1
 
-            ruskit destroy localhost:${port}
+            redis-clu reset localhost:${port} --hard 1
 
             sleep 1
 
@@ -102,4 +102,4 @@ sleep 1
 
 echo
 
-ruskit create -m ${#PORTS[@]} ${CLUSTER_INSTANCES}
+redis-clu create ${CLUSTER_INSTANCES}
